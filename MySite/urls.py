@@ -15,15 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-<<<<<<< HEAD
-from django.conf.urls import url, include
 
-urlpatterns = [
-    url(r'^egor/', include('egor.urls')),
-=======
 
 urlpatterns = [
     url('admin/', admin.site.urls),
     url(r'^grigor/$', include('Grigor.urls')),
->>>>>>> f6b256305959d56495e7bc03859a87e4f834b15a
+    url(r'^egor/', include('egor.urls')),
+
 ]
