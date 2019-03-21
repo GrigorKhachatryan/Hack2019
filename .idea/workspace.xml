@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="ec1fa9bb-0741-4249-90a8-e2fb714e7702" name="Default Changelist" comment="" />
+=======
+    <list default="true" id="19a40c09-5959-4e40-b2db-c560646e3b5f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Grigor/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Grigor/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MySite/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MySite/urls.py" afterDir="false" />
+    </list>
+>>>>>>> f6b256305959d56495e7bc03859a87e4f834b15a
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="FUSProjectUsageTrigger">
     <session id="315874941">
       <usages-collector id="statistics.lifecycle.project">
@@ -49,11 +59,24 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="250">
               <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
+=======
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MySite/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+              <folding>
+                <element signature="e#630#662#0" expanded="true" />
+              </folding>
+>>>>>>> f6b256305959d56495e7bc03859a87e4f834b15a
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/MySite/__init__.py">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -66,29 +89,50 @@
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
+=======
+        <entry file="file://$PROJECT_DIR$/Grigor/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+>>>>>>> f6b256305959d56495e7bc03859a87e4f834b15a
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/egor/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
               <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+=======
+        <entry file="file://$PROJECT_DIR$/MySite/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
+>>>>>>> f6b256305959d56495e7bc03859a87e4f834b15a
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/egor/templates/egor_app/hello.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
               <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+=======
+        <entry file="file://$PROJECT_DIR$/Grigor/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+>>>>>>> f6b256305959d56495e7bc03859a87e4f834b15a
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/egor/__init__.py">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -111,10 +155,52 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/egor/tests.py">
           <provider selected="true" editor-type-id="text-editor" />
+=======
+        <entry file="file://$PROJECT_DIR$/../../django_examples/mysite/mainApp/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Grigor/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="56" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../django_examples/mysite/mysite/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="1" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../django_examples/mysite/mainApp/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="19" />
+            </state>
+          </provider>
+>>>>>>> f6b256305959d56495e7bc03859a87e4f834b15a
         </entry>
       </file>
     </leaf>
   </component>
+<<<<<<< HEAD
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -123,12 +209,15 @@
       </list>
     </option>
   </component>
+=======
+>>>>>>> f6b256305959d56495e7bc03859a87e4f834b15a
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/MySite/urls.py" />
         <option value="$PROJECT_DIR$/egor/urls.py" />
         <option value="$PROJECT_DIR$/egor/templates/egor/hello.html" />
@@ -149,6 +238,21 @@
     <option name="y" value="30" />
     <option name="width" value="1277" />
     <option name="height" value="840" />
+=======
+        <option value="$PROJECT_DIR$/Grigor/views.py" />
+        <option value="$PROJECT_DIR$/Grigor/templates/index.html" />
+        <option value="$PROJECT_DIR$/MySite/urls.py" />
+        <option value="$PROJECT_DIR$/Grigor/urls.py" />
+        <option value="$PROJECT_DIR$/MySite/settings.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="164" />
+    <option name="y" value="51" />
+    <option name="width" value="1138" />
+    <option name="height" value="769" />
+>>>>>>> f6b256305959d56495e7bc03859a87e4f834b15a
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -159,6 +263,7 @@
         <subPane>
           <expand>
             <path>
+<<<<<<< HEAD
               <item name="Test" type="b2602c69:ProjectViewProjectNode" />
               <item name="Test" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -183,6 +288,19 @@
             <path>
               <item name="Test" type="b2602c69:ProjectViewProjectNode" />
               <item name="Test" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="MySite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MySite" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MySite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MySite" type="462c0819:PsiDirectoryNode" />
+              <item name="Grigor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MySite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MySite" type="462c0819:PsiDirectoryNode" />
+>>>>>>> f6b256305959d56495e7bc03859a87e4f834b15a
               <item name="MySite" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -193,15 +311,24 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+<<<<<<< HEAD
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+=======
+    <property name="WebServerToolWindowFactoryState" value="false" />
+>>>>>>> f6b256305959d56495e7bc03859a87e4f834b15a
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
+<<<<<<< HEAD
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/egor/templates" />
+=======
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Grigor" />
+>>>>>>> f6b256305959d56495e7bc03859a87e4f834b15a
     </key>
   </component>
   <component name="RunDashboard">
@@ -217,8 +344,13 @@
     </option>
   </component>
   <component name="RunManager">
+<<<<<<< HEAD
     <configuration name="Test" type="Python.DjangoServer" factoryName="Django server">
       <module name="Test" />
+=======
+    <configuration name="MySite" type="Python.DjangoServer" factoryName="Django server">
+      <module name="MySite" />
+>>>>>>> f6b256305959d56495e7bc03859a87e4f834b15a
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -246,6 +378,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
       <changelist id="ec1fa9bb-0741-4249-90a8-e2fb714e7702" name="Default Changelist" comment="" />
       <created>1553183896988</created>
       <option name="number" value="Default" />
@@ -269,6 +402,35 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.328877" />
+=======
+      <changelist id="19a40c09-5959-4e40-b2db-c560646e3b5f" name="Default Changelist" comment="" />
+      <created>1553184116129</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1553184116129</updated>
+      <workItem from="1553184118931" duration="983000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="983000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="164" y="51" width="1138" height="769" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+>>>>>>> f6b256305959d56495e7bc03859a87e4f834b15a
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -284,6 +446,7 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+<<<<<<< HEAD
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -324,12 +487,61 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+=======
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../../django_examples/mysite/mainApp/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../django_examples/mysite/mainApp/templates/mainApp/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../django_examples/mysite/mainApp/templates/mainApp/templates/templates.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="34" column="12" lean-forward="true" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Grigor/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="56" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Grigor/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../django_examples/mysite/mainApp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../django_examples/mysite/mysite/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="1" selection-end-column="32" />
+>>>>>>> f6b256305959d56495e7bc03859a87e4f834b15a
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/MySite/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -351,6 +563,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+=======
+    <entry file="file://$PROJECT_DIR$/MySite/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+          <folding>
+            <element signature="e#630#662#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Grigor/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MySite/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
+>>>>>>> f6b256305959d56495e7bc03859a87e4f834b15a
         </state>
       </provider>
     </entry>
