@@ -1,9 +1,18 @@
 from django.shortcuts import render
+from event.models import Artists
+
 
 def check(request):
-    email = request.POST.get('email')
-    ticket = request.POST.get('ticket')
-    return render(request, 'html')
+    all_artist = Artists.objects.all()
+    print(all_artist)
+
+    return render(request, 'index.html')
+
+def artist(request):
+
+    return render(request, 'index.html')
+
+
 
 
 # Create your views here.

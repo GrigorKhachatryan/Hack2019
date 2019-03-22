@@ -19,6 +19,7 @@ from django.contrib import admin
 
 urlpatterns = [
     url('admin/', admin.site.urls),
+    url(r'^', include('sisign.urls')),
 
 
 ]
