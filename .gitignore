@@ -6,5 +6,3 @@ __pycache__/
 # IntelliJ files
 .idea/
 *.iml
-
-*.prefs
