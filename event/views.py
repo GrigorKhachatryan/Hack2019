@@ -3,6 +3,9 @@ from event.models import Events, Artists, Polls, Questions
 from django.forms.models import model_to_dict
 from django.db import connection
 from django.shortcuts import redirect
+import requests
+from django.http import HttpResponse
+
 
 
 def hm(request):
@@ -100,8 +103,31 @@ def upgrade(request):
 def new_number(request):
     event_id = request.COOKIES['ref']
     number = request.POST.get('number')
-    #number = '+78113112'
-    f = open('contacts.txt', 'a')
-    f.write(number + ',')
-    return redirect('/event/?name={0}'.format(event_id))
+    print(number)
+    s = str(int(str(number)[-5:])//2*3)
+    print(s)
 
+
+    #number = '+78113112'
+    #f = open('contacts.txt', 'a')
+    #f.write(number + ',')
+    r = requests.get('https://sms.ru/sms/send?api_id=E153FE51-B4E2-7B9E-2EC7-E3DD557D9EA1&to={0}&msg={1}&json=1'.format(str(number), s))
+    print(r.json())
+
+    response = render(request, 'event_tmp/form.html')
+    response.set_cookie('number', number)
+    return response
+
+
+def check(request):
+    event_id = request.COOKIES['ref']
+    code = request.POST.get('code')
+    number = request.COOKIES['number']
+    if str(int(str(number)[-5:])//2*3) == str(code):
+        print("УРА")
+        f = open('contacts.txt', 'a')
+        f.write(number + ',')
+    else:
+        return HttpResponse("<h3>Неверный код</h3>")
+
+    return redirect('/event/?name={0}'.format(event_id))

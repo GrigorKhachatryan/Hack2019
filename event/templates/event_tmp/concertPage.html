@@ -127,13 +127,19 @@
             </div>
         </footer>
     </div>
-    <form class="subsForm" action="post" method="/event/new_number">
+    <form class="subsForm" action="/event/number/" method="post">
         {% csrf_token %}
         <input type="text"  name="number" required>
         <input type="submit">
     </form>
 
-    <form class="joinForm" action="post" method="/chat/">
+    <form class="subsForm" action="/event/chek/" method="post">
+        {% csrf_token %}
+        <input type="text"  name="code" required>
+        <input type="submit">
+    </form>
+
+    <form class="joinForm" action="/chat/" method="post">
         {% csrf_token %}
     <input type="text" required>
     <input type="submit">
