@@ -1,26 +1,25 @@
 body {
     width: 100%;
-    border: 1px solid black;
     padding: 0px;
     margin: 0px;
     font-family: 'Roboto', 'Arial', sans-serif;
+    background-color: burlywood;
 }
 
 .container {
     padding-left: 10px;
     padding-right: 10px;
     margin: 0px auto;
-    border: 2px solid red;
     height: auto;
     position: relative;
 }
 
 .name-artist {
-/*    margin-top: -450px;*/
     color: white;
 }
 
 .logo {
+    margin-top: 10px;
     width: 100%;
 }
 
@@ -29,24 +28,86 @@ header {
     text-align: center;
 }
 
+.navbar {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .head {
     width: 100%;
     position: absolute;
-    top: 0;
+    top: 60px;
     display: flex;
     flex-direction: column;
-    z-index: 1;
 }
 
 .on-main {
+    margin-left: 40px;
     text-decoration: none;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    color: white;
+    color: black;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.on-email {
+    cursor: pointer;
+    margin-right: 30px;
+    margin-left: auto;
+    color: black;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.container-btns {
+    display: flex;
+}
+
+.list-of-concerts {
+    background-color: chocolate;
+    margin-left: 0;
+    width: 200px;
+    display: none;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0px;
+    border: 1px solid black;
+    align-self: baseline;
+    z-index: 1;
+}
+
+.list-of-concerts li {
+    cursor: pointer;
+    padding: 5px;
+    width: 100%;
+}
+
+.list-of-concerts li:hover {
+    background-color: white;
+    text-decoration: underline;
+}
+
+.on-email:hover {
+    text-decoration: underline;
 }
 
 .on-main:hover {
+    text-decoration: underline;
+}
+
+.exit {
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 30px;
+    color: black;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.exit:hover {
     text-decoration: underline;
 }
 
@@ -67,7 +128,7 @@ main h1 {
 .artist-poll {
     display: inline-block;
     margin-right: 150px;
-    border: 1px solid black;
+/*    border: 1px solid black;*/
 }
 
 .artist-poll li form {
@@ -87,6 +148,10 @@ main h1 {
 }
 
 .artist-photo {
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 0 0 0 60px rgba(0,0,0,0) inset, .1em .1em .2em #800;
+    border-radius: 15px;
     width: 1000px;
     display: block;
     margin-left: auto;
@@ -96,6 +161,8 @@ main h1 {
 .add-poll {
     display: inline-block;
     width: 45px;
+    margin-right: 100px;
+    cursor: pointer;
 }
 
 .poll-container {
@@ -110,4 +177,36 @@ main h1 {
 
 .add-poll:hover {
     animation: addPoll .5s ease forwards;
+}
+
+.add-poll-form {
+    display: none;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.add-poll-form form {
+    padding-left: 5px;
+}
+
+.add-poll-form form input[type="submit"] {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+#question {
+    margin-top: 10px;
+}
+
+#songs {
+    margin-bottom: 10px;
+}
+
+footer {
+    border: 1px solid black;
+    min-height: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
