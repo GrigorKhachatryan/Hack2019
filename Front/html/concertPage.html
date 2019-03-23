@@ -10,7 +10,8 @@
     <div class="container">
         <header>
             <nav class="navbar">
-                <a class="on-main" href="startPage.html">На главную</a>
+               <img class="logo-site" src="../src/58623cd131349e0568ad89c2.png" alt="">
+                <a class="on-main" href="startPage.html">Главная</a>
                 <ul class="list-of-concerts">
                     <li><a>Концерт Паши Техника</a></li>
                     <li><a>Хан Замай</a></li>
@@ -21,34 +22,43 @@
                 <a class="exit" href="#">Выход</a>
             </nav>
             
-            <img class="logo" src="https://pbs.twimg.com/profile_banners/1348253246/1401206430/1500x500" alt="">
+            <div class="logo-div">
+                <img class="logo" src="https://pp.userapi.com/c845017/v845017097/1d0f97/RdkDgY9Z_4Y.jpg" alt="">
+            </div>
             <div class="head">
-                <h1 class="name-artist">"Имя певца"</h1>
                 <div class="about-concert">
                     <div class="main-nav date">Дата концерта: <span>01.01.2019</span></div>
                     <div class="main-nav place">Место проведения: <span>Санкт-Петербург, клуб А2</span></div>
                     <div class="main-nav time">Начало концерта: <span>14:00</span></div>
                 </div>
-            </div>
-        </header>
-        <main>
-            <h1>Для посетителей</h1>
-            <article class="description">
+                
+                <article class="description">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque repellendus aut ratione qui sunt veniam soluta aperiam quis dolore aliquam, corporis dicta quas voluptas, repellat maiores enim labore eum similique.</p>
             </article>
-            <section>
-               <img class="artist-photo" src="https://tabloid.informator.news/wp-content/uploads/sites/3/2018/10/FotorCreated-33.jpg" alt="">
+            </div>
+        </header>
+        <hr>
+        <main>
+            <section class="artist-main">
+              <div class="foo">
+               <img class="artist-photo" src="https://tabloid.informator.news/wp-content/uploads/sites/3/2018/10/FotorCreated-33.jpg" alt=""> <br>
+               <h1 class="name-artist"><a href="#">"Имя певца"</a></h1>
+               </div>
+<!--            </section>-->
+<!--              <h1>Для посетителей</h1>-->
+<!--               <section>-->
+               <div class="bar">
                 <h2>Опросы от артиста:</h2>
                 <div class="poll-container">
                     <ul class="artist-poll">
                         <li>
                             <form action="" method="post">
                                <label for="select">Какие песни вы больше всего хотите услышать?</label>
-                                <select name="songs" id="select" multiple>
+                                <select name="songs" id="select">
                                     <option value="1">Розовое вино</option>
                                     <option value="2">От винта</option>
                                     <option value="3">Мальчишки кадеты</option>
-                                    <option value="4">Цвет настроения синий</option>
+                                    <option value="4">Цвет синий</option>
                                 </select>
                                 <input type="submit">
                             </form>
@@ -66,26 +76,43 @@
                             </form>
                         </li>
                     </ul>
-
-                    <img class="add-poll" src="https://lh3.googleusercontent.com/5aI-VClrZ3nTgDzjd7MKeX1R_vHC_Ks8nJksNADBJraNaXfeph9lT1cDKWcyk9lO_LY" alt="">
-                    <div class="add-poll-form">
-                        <form action="">
-                            <label for="question">Тема</label>
-                            <input type="text" id="question" placeholder="Вопрос" required><br><br>
-                            <label for="radio">Select or multiselect?</label>
-                            <p><input type="radio" name="select" value="multi" checked>Multi</p>
-                            <p><input type="radio" name="select" value="select">Select</p>
-                            <label for="songs">Songs</label>
-                            <input type="text" name="songs" id=songs placeholder="Songs" required><br>
-                            <input type="submit">
-                        </form>
-                    </div>
+                    <section class="addPoll">
+                       <div class="formDiv">
+                            <img class="add-poll" src="https://lh3.googleusercontent.com/5aI-VClrZ3nTgDzjd7MKeX1R_vHC_Ks8nJksNADBJraNaXfeph9lT1cDKWcyk9lO_LY" alt="">
+                            <div class="add-poll-form">
+                                <form action="">
+                                    <label for="question">Тема</label>
+                                    <input type="text" id="question" placeholder="Вопрос" required><br><br>
+                                    <label for="songs">Songs</label>
+                                    <input type="text" name="songs" id=songs placeholder="Songs" required><br>
+                                    <input type="submit">
+                                </form>
+                            </div>
+                        </div>
+                </section> 
                 </div>
-            </section> 
+            </div>
+            </section>
+<!--
+            <div class="bar">
+                
+                
+            </div>
+-->
+            <hr>
+            <div class="btnContainer">
+                <button class="btn subscribe">Подписаться на смс рассылку</button>
+                <button class="btn join">Написать артисту</button>
+            </div>
         </main>
+        <hr>
         <footer>
-           <div>
-               Санкт-Петербург, HackUniversity
+            <div>
+            <img src="https://s.starladder.com/uploads/team_logo/f/b/8/f/meta_tag_cd5f05c288ddb97f9f56108d0f1d8f17.png" alt="">
+           
+               Санкт-Петербург, HackUniversity <br>
+               Студенты СПбГУ <br>
+               Team Dota Science
            </div>
             <div class="copyright">
                 2019 © <br>
@@ -93,6 +120,15 @@
             </div>
         </footer>
     </div>
+    <form class="subsForm" action="post" method="">
+        <input type="text" required>
+        <input type="submit">
+    </form>
+
+    <form class="joinForm" action="post" method="">
+    <input type="text" required>
+    <input type="submit">
+    </form>
     <script src="../scripts/concertPageScript.js" defer></script>
 </body>
 </html>
