@@ -22,5 +22,6 @@ urlpatterns = [
     url(r'^check/$', views.check, name = "check"),
     url(r'^artists/$', views.artist, name = "artist"),
     url(r'^artist/', views.artist_prof, name = "artist_prof"),
+    url(r'^feedback/', views.feedback, name = "feedback"),
 
 ]

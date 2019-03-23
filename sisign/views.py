@@ -8,13 +8,17 @@ def index(request):
 def check(request):
     email = '"' + request.POST.get('email') + '"'
     ticket = request.POST.get('ticket')
+
     obj = None
     for tick in Fans.objects.raw('SELECT * FROM event_fans WHERE email == {0}  and ticket == {1}'.format(email, ticket)):
         obj = model_to_dict(tick)['event_id']
         print(obj)
+    response = redirect('/event/?name=' + str(obj))
+    response.set_cookie('email', email)
+    response.set_cookie('ticket', ticket)
     if obj == None:
         return render(request, 'error.html')
-    return redirect('/event/?name=' + str(obj))
+    return response
 
 def artist(request):
 
@@ -25,9 +29,11 @@ def artist(request):
     for art in Artists.objects.raw('SELECT * FROM event_artists WHERE log =={0} and pas == {1}'.format(login,password)):
         obj = model_to_dict(art)
         id = obj['id']
+    response = redirect('../artist/?name='+ str(id))
+    response.set_cookie('login', login)
     if obj == None:
         return render(request, 'error.html')
-    return redirect('../artist/?name='+ str(id))
+    return response
 
 
 def artist_prof(request):
@@ -48,6 +54,13 @@ def artist_prof(request):
     print(event)
 
     return render(request, 'artist.html', {'art': obj, 'pol':event})
+
+
+def feedback(request):
+    print(request.POST.get('name'))
+    print(request.POST.get('phone'))
+    print(request.POST.get('email'))
+    return redirect('/')
 
 
 # Create your views here.
