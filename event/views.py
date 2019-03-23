@@ -15,4 +15,4 @@ def hm(request):
     obj.update({'name':art})
     print(obj)
 
-    return render(request, 'index.html', obj)
+    return render(request, 'event_tmp/hello.html', obj)
