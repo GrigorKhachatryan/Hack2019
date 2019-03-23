@@ -3,6 +3,7 @@ body {
     padding: 0px;
     margin: 0px;
     font-family: 'Roboto', 'Arial', sans-serif;
+    background-color: burlywood;
 }
 
 .container {
@@ -20,6 +21,7 @@ header {
 }
 
 header .nav {
+    background-color: burlywood;
     height: 50px;
     display: flex;
     justify-content: center;
@@ -48,7 +50,7 @@ header ul li a:hover {
 }
 
 header ul li:hover {
-    background-color: aqua;
+    background-color: chocolate;
 }
 
 .logo {
@@ -70,15 +72,11 @@ header ul li:hover {
 }
 
 .title-img {
-/*    float: left;*/
-    height: 40px;
+    height: 50px;
     width: auto;
-/*    margin-right: 20px;*/
 }
 
 .title {
-/*    margin: 0px;*/
-/*    padding: 0px;*/
     margin: 0;
     padding: 0;
     width: 700px;
@@ -96,6 +94,10 @@ header ul li:hover {
 }
 
 .form-img {
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 0 0 0 60px rgba(0,0,0,0) inset, .1em .1em .2em #800;
+    border-radius: 15px;
     width: 400px;
     height: auto;
 }
@@ -117,9 +119,17 @@ header ul li:hover {
 }
 
 .button-who-is {
+    cursor: pointer;
+    border: 1px solid white;
+    background-color: inherit;
     display: inline-block;
     padding: 10px;
     border-radius: 5px;
+}
+
+.button-who-is:hover {
+    background-color: chocolate;
+    border-color: black;
 }
 
 .sign-form label {
@@ -137,13 +147,16 @@ header ul li:hover {
 
 input[type="submit"] {
     display: inline-block;
+    cursor: pointer;
+    border: 1px solid white;
+    background-color: inherit;
     width: 70px;
     padding: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-.list-OF-concerts {
+.list-of-concerts {
     margin-bottom: 20px;
 }
 
@@ -163,8 +176,12 @@ input[type="submit"] {
 
 
 .list-headers .on-full-page a{
-    color: black;
+    color: darkblue;
     text-decoration: none;
+}
+
+.list-headers .on-full-page a:hover {
+    text-decoration: underline;
 }
 
 .list-and-img {
@@ -178,6 +195,7 @@ input[type="submit"] {
 }
 
 .list-of-concerts ol li a {
+    color: darkblue;
     text-decoration: none;
     font-size: 20px;
 }
@@ -187,6 +205,10 @@ input[type="submit"] {
 }
 
 .list-img {
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 0 0 0 60px rgba(0,0,0,0) inset, .1em .1em .2em #800;
+    border-radius: 15px;
     display: inline-block;
     width: 400px;
     height: auto;
@@ -201,6 +223,10 @@ input[type="submit"] {
 }
 
 .img-about {
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 0 0 0 60px rgba(0,0,0,0) inset, .1em .1em .2em #800;
+    border-radius: 15px;
     width: 400px;
     margin-right: 20px;;
 }

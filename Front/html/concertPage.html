@@ -9,7 +9,11 @@
 <body>
     <div class="container">
         <header>
-            <a class="on-main" href="startPage.html">На главную</a>
+            <nav class="navbar">
+                <a class="on-main" href="startPage.html">На главную</a>
+                <div class="on-email">"EMAIL"</div>
+            </nav>
+            
             <img class="logo" src="https://pbs.twimg.com/profile_banners/1348253246/1401206430/1500x500" alt="">
             <div class="head">
                 <h1 class="name-artist">"Имя певца"</h1>
@@ -57,9 +61,31 @@
                     </ul>
 
                     <img class="add-poll" src="https://lh3.googleusercontent.com/5aI-VClrZ3nTgDzjd7MKeX1R_vHC_Ks8nJksNADBJraNaXfeph9lT1cDKWcyk9lO_LY" alt="">
+                    <div class="add-poll-form">
+                        <form action="">
+                            <label for="question">Тема</label>
+                            <input type="text" id="question" placeholder="Вопрос" required><br><br>
+                            <label for="radio">Select or multiselect?</label>
+                            <p><input type="radio" name="select" value="multi" checked>Multi</p>
+                            <p><input type="radio" name="select" value="select">Select</p>
+                            <label for="songs">Songs</label>
+                            <input type="text" name="songs" id=songs placeholder="Songs" required><br>
+                            <input type="submit">
+                        </form>
+                    </div>
                 </div>
-            </section>
+            </section> 
         </main>
+        <footer>
+           <div>
+               Санкт-Петербург, HackUniversity
+           </div>
+            <div class="copyright">
+                2019 © <br>
+                Все права защищены
+            </div>
+        </footer>
     </div>
+    <script src="../scripts/concertPageScript.js"></script>
 </body>
 </html>
