@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/startPageStyles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <title>Концерты!!!</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <ul class="nav">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#list-of-concerts">Список концертов</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li class="auth"><a href="#signIn">Вход</a></li>
+<!--                <li><a href="#">Регистрация</a></li>-->
+            </ul>
+        </header>
+        <div class="logo">
+            <img src="http://www.jojosjerkpit.com/wp-content/uploads/2013/09/live-music-slide.png">
+        </div>
+        <div class="title-container" id="signIn">
+            <img class="title-img" src="http://img09.deviantart.net/f908/i/2010/303/0/c/freddie_mercury_by_nekosuke8d-d31tghn.png" alt="">
+            <img class="title-img" src="https://i.pinimg.com/736x/1a/70/9e/1a709eb92e29312e4ce2f3bde7a2f4db--pencil-drawings-drawings-of.jpg" alt="">
+            <img class="title-img" src="https://avatanplus.com/files/resources/original/56759c2f8beda151bb6a19d5.png" alt="">
+            <h3 class="title">Здесь люди общаются со своими кумирами</h3>
+            <img class="title-img" class="title-img" src="https://ya-webdesign.com/images/kanye-west-cartoon-png-4.png" alt="">
+            <img class="title-img" src="https://pnggallery.com/wp-content/uploads/lana-del-rey-png-hd.png" alt="">
+            <img class="title-img" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/c8c4f299-4064-433b-8a7c-90baccbc0f4c/da9h3m9-9bae7680-c7f6-49cf-8de2-f02758a31001.png/v1/fill/w_897,h_891,strp/nicki_minaj_png_by_maarcopngs_da9h3m9-pre.png" alt="">
+        </div>
+        <hr>
+        <section class="sign-in">
+           <img class="form-img" src="http://www.lilymercer.co.uk/wp-content/uploads/2017/07/971455-asap-rocky.jpg" alt="">
+            <div>
+                <h3 id="sign">Войти</h3>
+                <h4 class="who-r-u">Кто вы?</h4>
+                <form class="sign-form" action="/check/" method="post">
+                    {% csrf_token %}
+                    <div class="input-div">
+                        <label for="email">Ваш email:</label>
+                        <input type="email" name="email" id="email">
+                    </div>
+                    <div class="input-div">
+                        <label for="ticket-number">Номер билета:</label>
+                        <input type="text" name="ticket" id="ticket-number">
+                    </div>
+                    <input type="submit" value="Войти">
+                </form>
+                <form action="/artist/" method="post" class="for-actors">
+                    {% csrf_token %}
+                    <div class="input-div">
+                        <label for="email">Ваш email:</label>
+                        <input type="email" name="email" id="email">
+                    </div>
+                    <div class="input-div">
+                        <label for="pas">Ваш пароль:</label>
+                        <input type="password" name="password" id="pas">
+                    </div>
+                    <input type="submit" value="Войти">
+                </form>
+                <button class="sign-for-users button-who-is">Я ПРОСТОЙ ЧЕЛОВЕК</button>
+                <button class="sign-for-actors button-who-is">Я АКТЕР</button>
+            </div>
+        </section>
+        <hr>
+        <section class="list-of-concerts">
+            <div class="list-headers">
+                <h3 id="list-of-concerts">Ближайшие десять концертов</h3>
+                <span class="on-full-page"><a href="#">На страницу со списком</a></span>
+            </div>
+            <div class="list-and-img">
+                <ol>
+                    <li><a href="#">Баста в Олимпийском</a></li>
+                    <li><a href="#">Оксимирон в А2</a></li>
+                    <li><a href="#">A$AP ROCKY в Москве!!!!</a></li>
+                    <li><a href="#">Елена Ваенга в Набережных Челнах</a></li>
+                    <li><a href="#">Егор Крид в с новым нехитом</a></li>
+                    <li><a href="#">Пошлая Молли в Москве</a></li>
+                    <li><a href="#">Антоха МС презентует новый альбом</a></li>
+                    <li><a href="#">Гречка. Первое выступление после критики Земфиры</a></li>
+                    <li><a href="#">Гуф жив!</a></li>
+                    <li><a href="#">Птаха a.k.a. рваные джинсы с новым альбомом "Ювелирный побег"</a></li>
+                </ol>
+                <img class="list-img" src="http://itd3.mycdn.me/image?id=872786101958&t=20&plc=WEB&tkn=*Do_02C4wJy08jEW3isjhV9_vapg" alt="">
+            </div>
+        </section>
+        <hr>
+        <section class="help">
+           <img class="img-about" src="https://avatanplus.com/files/effects/mid/5c2f51c35fb8316818d76340.jpg" alt="">
+           <div>
+                <h3 id="about">О нас</h3>
+                <article>
+                    <p class="p-about">
+                        Для нас важно, чтобы люди, посещающие концерты всех артистов получали максимум удовольствия. На этом сайте люди, купившие билет на концерт своего любимого исполнителя, могут оставить пожелания о будущем концерте, проголосовать в опросах самого исполнителя, а также поучаствовать в различных флеш-мобах или розыгрышах.
+                    </p>
+                </article>
+            </div>
+        </section>
+        <footer>
+           <div>
+               Санкт-Петербург, HackUniversity
+           </div>
+            <div class="copyright">
+                2019 © <br>
+                Все права защищены
+            </div>
+        </footer>
+    </div>
+    <script src="../static/startPageScript.js"></script>
+</body>
+</html>
