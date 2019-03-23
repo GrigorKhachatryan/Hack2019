@@ -240,7 +240,7 @@ input[type="submit"] {
 
 footer {
     border: 1px solid black;
-    min-height: 15px;
+    min-height: 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;

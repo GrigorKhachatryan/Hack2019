@@ -62,13 +62,9 @@ header {
     border: 1px solid black;
 }
 
-.container-btns {
-    display: flex;
-}
-
 .list-of-concerts {
     background-color: chocolate;
-    margin-left: 0;
+    margin-right: 0;
     width: 200px;
     display: none;
     flex-wrap: wrap;
@@ -134,9 +130,6 @@ main h1 {
 .artist-poll li form {
     font-size: 20px;
     width: 700px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .artist-poll li form select {
