@@ -7,17 +7,17 @@ document.querySelector('.add-poll').addEventListener('click', () => {
   }
 });
 
-document.querySelector('.on-email').addEventListener('click', () => {
-  const ul = document.querySelector('.list-of-concerts');
-  if (ul.style.display === 'flex') {
-    ul.style.display = 'none';
-    document.querySelector('.on-email').style.marginLeft = 'auto';
-  } else {
-    document.querySelector('.on-email').style.marginLeft = '0px';
-    ul.style.marginLeft = 'auto';tes
-    ul.style.display = 'flex';
-  }
-});
+// document.querySelector('.on-email').addEventListener('click', () => {
+//   const ul = document.querySelector('.list-of-concerts');
+//   if (ul.style.display === 'flex') {
+//     ul.style.display = 'none';
+//     document.querySelector('.on-email').style.marginLeft = 'auto';
+//   } else {
+//     document.querySelector('.on-email').style.marginLeft = '0px';
+//     ul.style.marginLeft = 'auto';tes
+//     ul.style.display = 'flex';
+//   }
+// });
 
 document.querySelector('.subscribe').addEventListener('click', () => {
     let res = prompt('Если согласны, введите номер телефона', 79999999999);

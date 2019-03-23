@@ -14,7 +14,13 @@
                 <li><a href="#">Главная</a></li>
 <!--                <li><a href="#list-of-concerts">Список концертов</a></li>-->
                 <li><a href="#about">О нас</a></li>
+                {% if bool == True %}
                 <li class="auth"><a href="#signIn">Вход</a></li>
+                {% endif %}
+                {% if bool == False %}
+                <a href="/exit"><li class="auth">Выход</li></a>
+                {% endif %}
+
 <!--                <li><a href="#">Регистрация</a></li>-->
             </ul>
         </header>
@@ -32,6 +38,7 @@
         </div>
         <hr>
         <section class="sign-in">
+            {% if bool == True %}
             <div class="sign-container">
                 <h3 id="sign">Войти</h3>
                 <h4 class="who-r-u">Кто вы?</h4>
@@ -39,11 +46,11 @@
                     {% csrf_token %}
                     <div class="input-div">
                         <label for="email">Ваш email:</label>
-                        <input type="email" name="email" id="email">
+                        <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
                     </div>
                     <div class="input-div">
                         <label for="ticket-number">Номер билета:</label>
-                        <input type="text" name="ticket" id="ticket-number">
+                        <input type="text" name="ticket" id="ticket-number" pattern="[A-Z]{2}[0-9]{6}">
                     </div>
                     <input type="submit" value="Войти">
                 </form>
@@ -57,11 +64,13 @@
                         <label for="pas">Ваш пароль:</label>
                         <input type="password" name="password" id="pas">
                     </div>
+
                     <input type="submit" value="Войти">
                 </form>
                 <button class="sign-for-users button-who-is">Я ПРОСТОЙ ЧЕЛОВЕК</button>
                 <button class="sign-for-actors button-who-is">Я АКТЕР</button>
             </div>
+            {% endif %}
             <img class="form-img" src="http://www.lilymercer.co.uk/wp-content/uploads/2017/07/971455-asap-rocky.jpg" alt="">
         </section>
         <hr>

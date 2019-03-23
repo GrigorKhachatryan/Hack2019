@@ -3,6 +3,9 @@ from event.models import Events, Artists, Polls, Questions
 from django.forms.models import model_to_dict
 from django.db import connection
 from django.shortcuts import redirect
+import requests
+from django.http import HttpResponse
+
 
 
 def hm(request):
@@ -46,9 +49,18 @@ def hm(request):
     for i in count:
         if max < i:
             max = i
+    em = '/artist/?name=' + str(obj['id'])
+    if 'login' not in request.COOKIES:
+        cook_login = False
+    else:
+        cook_login = request.COOKIES['login']
+    if 'email' not in request.COOKIES:
+        cook_email = False
+    else:
+        cook_email = request.COOKIES['email']
 
     response = render(request, 'event_tmp/concertPage.html', {'obj': obj, 'dict': dict, 'dict_id': dict_id,
-                                                              'dict_count': dict_count, 'count': count, 'max': max})
+                                                              'dict_count': dict_count, 'count': count, 'max': max, 'em': em, 'cook_login': cook_login, 'cook_email': cook_email})
     response.set_cookie('ref', ref)
     return response
 
@@ -81,7 +93,7 @@ def add(request):
 
 def upgrade(request):
     event_id = request.COOKIES['ref']
-    val = request.POST.get('name_name')
+    val = request.POST.get('songs')
 
     event = []
     for ev in Questions.objects.all().filter(name=val):
@@ -100,8 +112,31 @@ def upgrade(request):
 def new_number(request):
     event_id = request.COOKIES['ref']
     number = request.POST.get('number')
-    #number = '+78113112'
-    f = open('contacts.txt', 'a')
-    f.write(number + ',')
-    return redirect('/event/?name={0}'.format(event_id))
+    print(number)
+    s = str(int(str(number)[-5:])//2*3)
+    print(s)
 
+
+    #number = '+78113112'
+    #f = open('contacts.txt', 'a')
+    #f.write(number + ',')
+    r = requests.get('https://sms.ru/sms/send?api_id=E153FE51-B4E2-7B9E-2EC7-E3DD557D9EA1&to={0}&msg={1}&json=1'.format(str(number), s))
+    print(r.json())
+
+    response = render(request, 'event_tmp/form.html')
+    response.set_cookie('number', number)
+    return response
+
+
+def check(request):
+    event_id = request.COOKIES['ref']
+    code = request.POST.get('code')
+    number = request.COOKIES['number']
+    if str(int(str(number)[-5:])//2*3) == str(code):
+        print("УРА")
+        f = open('contacts.txt', 'a')
+        f.write(number + ',')
+    else:
+        return HttpResponse("<h3>Неверный код</h3>")
+
+    return redirect('/event/?name={0}'.format(event_id))
