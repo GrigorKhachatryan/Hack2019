@@ -24,7 +24,7 @@ def check(request):
 def artist(request):
 
 
-    login = '"' + request.POST.get('email') + '"'
+    login = '"' + request.POST.get('login') + '"'
     password = request.POST.get('password')
     obj = None
     for art in Artists.objects.raw('SELECT * FROM event_artists WHERE log =={0} and pas == {1}'.format(login,password)):
