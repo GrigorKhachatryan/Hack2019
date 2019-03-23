@@ -10,8 +10,16 @@
 
        body { background-color: darkgoldenrod; }
 
+
+
     </style>
     {% endif %}
+    {% if cook_login == False %}
+    <style>
+        .add-poll {display: none;}
+    </style>
+         {% endif %}
+
 </head>
 <body>
     <div class="container">
@@ -19,18 +27,18 @@
             <nav class="navbar">
                <img class="logo-site" src="../static/58623cd131349e0568ad89c2.png" alt="">
 
-{#                <ul class="list-of-concerts">#}
-{#                    <li><a>Концерт Паши Техника</a></li>#}
-{#                    <li><a>Хан Замай</a></li>#}
-{#                    <li><a>Мамин Podrygun</a></li>#}
-{#                    <li><a>Сява</a></li>#}
-{#                </ul>#}
-{#                {% if cook_login != False  %}#}
-{#                <div class="on-email">{{ cook_login }}</div>#}
-{#                {% endif %}#}
-{#            {% if cook_email != False  %}#}
-{#                <div class="on-email">{{ cook_email }}</div>#}
-{#                {% endif %}#}
+<!--{#                <ul class="list-of-concerts">#}-->
+<!--{#                    <li><a>Концерт Паши Техника</a></li>#}-->
+<!--{#                    <li><a>Хан Замай</a></li>#}-->
+<!--{#                    <li><a>Мамин Podrygun</a></li>#}-->
+<!--{#                    <li><a>Сява</a></li>#}-->
+<!--{#                </ul>#}-->
+<!--{#                {% if cook_login != False  %}#}-->
+<!--{#                <div class="on-email">{{ cook_login }}</div>#}-->
+<!--{#                {% endif %}#}-->
+<!--{#            {% if cook_email != False  %}#}-->
+<!--{#                <div class="on-email">{{ cook_email }}</div>#}-->
+<!--{#                {% endif %}#}-->
                 <a class="exit" href="/exit/">Выход</a>
             </nav>
 
@@ -39,13 +47,12 @@
             </div>
             <div class="head">
                 <div class="about-concert">
-                    <div class="main-nav date">Дата концерта: <span>01.01.2019</span></div>
+                    <div class="main-nav date">Дата концерта: <span>{{obj.time}}</span></div>
                     <div class="main-nav place">Место проведения: <span>Санкт-Петербург, клуб А2</span></div>
-                    <div class="main-nav time">Начало концерта: <span>14:00</span></div>
                 </div>
 
                 <article class="description">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque repellendus aut ratione qui sunt veniam soluta aperiam quis dolore aliquam, corporis dicta quas voluptas, repellat maiores enim labore eum similique.</p>
+                    <p>{{obj.description}}</p>
             </article>
             </div>
         </header>
@@ -94,10 +101,13 @@
                                     {% endfor %}
 
                     </ul>
+
                     <section class="addPoll">
                        <div class="formDiv">
+
                             <img class="add-poll" src="https://lh3.googleusercontent.com/5aI-VClrZ3nTgDzjd7MKeX1R_vHC_Ks8nJksNADBJraNaXfeph9lT1cDKWcyk9lO_LY" alt="">
-                            <div class="add-poll-form">
+
+                           <div class="add-poll-form">
                                 <form action="/event/add/" method="post">
                                     {% csrf_token %}
                                     <label for="question">Тема</label>
@@ -109,6 +119,7 @@
                             </div>
                         </div>
                 </section>
+
                 </div>
             </div>
             </section>
