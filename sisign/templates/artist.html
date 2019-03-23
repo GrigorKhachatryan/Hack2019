@@ -70,37 +70,36 @@ body{background:url(http://bootstraptema.ru/images/bg/bg-1.png)}
  <div class="panel">
  <div class="panel-body">
  <ul id="myTab" class="nav nav-pills">
- <li class="active"><a href="#contact" data-toggle="tab">Отправить сообщение</a></li>
+     <li class="active"><a href="#info" data-toggle="tab">Информация</a></li>
+{% if cook_email == True  %}
+ <li class=""><a href="#contact" data-toggle="tab">Отправить сообщение</a></li>
+ {% endif %}
+{% if cook_login == True  %}
      <li class=""><a href="#community" data-toggle="tab">Сообщества</a></li>
-
+{% endif %}
  </ul>
  <div id="myTabContent" class="tab-content">
 <hr>
-  <div class="tab-pane fade active in" id="contact">
+  <div class="tab-pane fade" id="contact">
  <p></p>
- <form role="form">
+ <form role="form" method="post" action="/feedback/">
+     {% csrf_token %}
  <div class="form-group">
  <label>Ваше имя</label>
- <input type="text" class="form-control rounded" placeholder="Укажите Ваше Имя">
+ <input type="text" class="form-control rounded" name="name" placeholder="Укажите Ваше Имя">
  </div>
  <div class="form-group">
  <label>Ваш телефон</label>
- <input type="text" class="form-control rounded" placeholder="(+7)(095)123456">
+ <input type="phone" class="form-control rounded" name="phone" placeholder="(+7)(095)123456">
  </div>
  <div class="form-group">
  <label>E-mail адрес</label>
- <input type="email" class="form-control rounded" placeholder="Ваш Е-майл">
+ <input type="email" class="form-control rounded" name="email" placeholder="Ваш Е-майл">
  </div>
- <div class="form-group">
- <div class="checkbox">
- <label>
- <input type="checkbox"> Согласен с условиями
- </label>
- </div>
- </div>
+
  <div class="form-group">
  <label>Текст Вашего сообщения</label>
- <textarea class="form-control rounded" style="height: 100px;"></textarea>
+ <textarea class="form-control rounded" name="text" style="height: 100px;"></textarea>
  <p class="help-block">Текст сообщения будет отправлен пользователю</p>
  </div>
  <div class="form-group">
@@ -109,6 +108,16 @@ body{background:url(http://bootstraptema.ru/images/bg/bg-1.png)}
  </form>
  </div>
 
+
+  <div class="tab-pane fade active in " id="info">
+ <h4>История профиля</h4>
+ <table class="table table-th-block">
+ <tbody>
+ <tr><td class="active">Посещаемость концертов</td><td>{{ stat }}</td></tr>
+ <tr><td class="active">Средний рейтинг концертов</td><td>Ссылка</td></tr>
+</tbody>
+ </table>
+ </div>
 
      <div class="tab-pane fade " id="community">
  <h4>История профиля</h4>
