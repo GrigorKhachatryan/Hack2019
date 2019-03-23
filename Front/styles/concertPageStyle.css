@@ -19,6 +19,7 @@ body {
 }
 
 .logo {
+    margin-top: 10px;
     width: 100%;
 }
 
@@ -28,6 +29,8 @@ header {
 }
 
 .navbar {
+    margin-top: 15px;
+    margin-bottom: 10px;
     height: 50px;
     display: flex;
     justify-content: space-between;
@@ -37,12 +40,13 @@ header {
 .head {
     width: 100%;
     position: absolute;
-    top: 30px;
+    top: 60px;
     display: flex;
     flex-direction: column;
 }
 
 .on-main {
+    margin-left: 40px;
     text-decoration: none;
     color: black;
     padding: 10px;
@@ -50,9 +54,40 @@ header {
 }
 
 .on-email {
+    cursor: pointer;
+    margin-right: 30px;
+    margin-left: auto;
     color: black;
     padding: 10px;
     border: 1px solid black;
+}
+
+.container-btns {
+    display: flex;
+}
+
+.list-of-concerts {
+    background-color: chocolate;
+    margin-left: 0;
+    width: 200px;
+    display: none;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0px;
+    border: 1px solid black;
+    align-self: baseline;
+    z-index: 1;
+}
+
+.list-of-concerts li {
+    cursor: pointer;
+    padding: 5px;
+    width: 100%;
+}
+
+.list-of-concerts li:hover {
+    background-color: white;
+    text-decoration: underline;
 }
 
 .on-email:hover {
@@ -60,6 +95,19 @@ header {
 }
 
 .on-main:hover {
+    text-decoration: underline;
+}
+
+.exit {
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 30px;
+    color: black;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.exit:hover {
     text-decoration: underline;
 }
 
