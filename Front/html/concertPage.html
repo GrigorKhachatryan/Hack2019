@@ -10,7 +10,7 @@
     <div class="container">
         <header>
             <a class="on-main" href="startPage.html">На главную</a>
-<!--            <img class="logo" src="https://pbs.twimg.com/profile_banners/1348253246/1401206430/1500x500" alt="">-->
+            <img class="logo" src="https://pbs.twimg.com/profile_banners/1348253246/1401206430/1500x500" alt="">
             <div class="head">
                 <h1 class="name-artist">"Имя певца"</h1>
                 <div class="about-concert">
@@ -22,23 +22,42 @@
         </header>
         <main>
             <h1>Для посетителей</h1>
+            <article class="description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque repellendus aut ratione qui sunt veniam soluta aperiam quis dolore aliquam, corporis dicta quas voluptas, repellat maiores enim labore eum similique.</p>
+            </article>
             <section>
-                <div>Опросы от артиста:</div>
-                <ul class="artist-poll">
-                    <li>
-                        <form action="">
-                           <label for="select">Какие песни вы больше всего хотите услышать?</label>
-                            <select name="songs" id="select" multiple>
-                                <option value="1">Розовое вино</option>
-                                <option value="2">От винта</option>
-                                <option value="3">Мальчишки кадеты</option>
-                                <option value="4">Цвет настроения синий</option>
-                            </select>
-                            <input type="submit">
-                        </form>
-                    </li>
-                    <li></li>
-                </ul>
+               <img class="artist-photo" src="https://tabloid.informator.news/wp-content/uploads/sites/3/2018/10/FotorCreated-33.jpg" alt="">
+                <h2>Опросы от артиста:</h2>
+                <div class="poll-container">
+                    <ul class="artist-poll">
+                        <li>
+                            <form action="" method="post">
+                               <label for="select">Какие песни вы больше всего хотите услышать?</label>
+                                <select name="songs" id="select" multiple>
+                                    <option value="1">Розовое вино</option>
+                                    <option value="2">От винта</option>
+                                    <option value="3">Мальчишки кадеты</option>
+                                    <option value="4">Цвет настроения синий</option>
+                                </select>
+                                <input type="submit">
+                            </form>
+                        </li>
+                        <li>
+                            <form action="" method="post">
+                                <label for="time">Желательное время концерта?</label>
+                                <select name="time" id="time">
+                                    <option value="1">1 час</option>
+                                    <option value="2" selected>2 часа</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                                <input type="submit">
+                            </form>
+                        </li>
+                    </ul>
+
+                    <img class="add-poll" src="https://lh3.googleusercontent.com/5aI-VClrZ3nTgDzjd7MKeX1R_vHC_Ks8nJksNADBJraNaXfeph9lT1cDKWcyk9lO_LY" alt="">
+                </div>
             </section>
         </main>
     </div>
