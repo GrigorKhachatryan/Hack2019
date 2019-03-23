@@ -169,6 +169,7 @@ main h1 {
 
 .foo {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -213,15 +214,18 @@ main h1 {
 
 .bar {
     height: auto;
+    margin-left: 100px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
 }
 
 .add-poll {
     display: inline-block;
     width: 45px;
-    margin-right: 100px;
+    margin-right: auto;
+    margin-left: auto;
     cursor: pointer;
 }
 

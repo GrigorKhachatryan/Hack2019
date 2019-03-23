@@ -46,9 +46,18 @@ def hm(request):
     for i in count:
         if max < i:
             max = i
+    em = '/artist/?name=' + str(obj['id'])
+    if 'login' not in request.COOKIES:
+        cook_login = False
+    else:
+        cook_login = request.COOKIES['login']
+    if 'email' not in request.COOKIES:
+        cook_email = False
+    else:
+        cook_email = request.COOKIES['email']
 
     response = render(request, 'event_tmp/concertPage.html', {'obj': obj, 'dict': dict, 'dict_id': dict_id,
-                                                              'dict_count': dict_count, 'count': count, 'max': max})
+                                                              'dict_count': dict_count, 'count': count, 'max': max, 'em': em, 'cook_login': cook_login, 'cook_email': cook_email})
     response.set_cookie('ref', ref)
     return response
 
@@ -81,7 +90,7 @@ def add(request):
 
 def upgrade(request):
     event_id = request.COOKIES['ref']
-    val = request.POST.get('name_name')
+    val = request.POST.get('songs')
 
     event = []
     for ev in Questions.objects.all().filter(name=val):

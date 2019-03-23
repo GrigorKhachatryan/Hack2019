@@ -5,21 +5,33 @@
     <link rel="stylesheet" href="../static/concertPageStyle.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <title>Concert</title>
+    {% if cook_login != False %}
+    <style>
+
+       body { background-color: darkgoldenrod; }
+
+    </style>
+    {% endif %}
 </head>
 <body>
     <div class="container">
         <header>
             <nav class="navbar">
                <img class="logo-site" src="../static/58623cd131349e0568ad89c2.png" alt="">
-                <a class="on-main" href="/">Главная</a>
-                <ul class="list-of-concerts">
-                    <li><a>Концерт Паши Техника</a></li>
-                    <li><a>Хан Замай</a></li>
-                    <li><a>Мамин Podrygun</a></li>
-                    <li><a>Сява</a></li>
-                </ul>
-                <div class="on-email">"EMAIL"</div>
-                <a class="exit" href="#">Выход</a>
+
+{#                <ul class="list-of-concerts">#}
+{#                    <li><a>Концерт Паши Техника</a></li>#}
+{#                    <li><a>Хан Замай</a></li>#}
+{#                    <li><a>Мамин Podrygun</a></li>#}
+{#                    <li><a>Сява</a></li>#}
+{#                </ul>#}
+{#                {% if cook_login != False  %}#}
+{#                <div class="on-email">{{ cook_login }}</div>#}
+{#                {% endif %}#}
+{#            {% if cook_email != False  %}#}
+{#                <div class="on-email">{{ cook_email }}</div>#}
+{#                {% endif %}#}
+                <a class="exit" href="/exit/">Выход</a>
             </nav>
 
             <div class="logo-div">
@@ -42,7 +54,7 @@
             <section class="artist-main">
               <div class="foo">
                <img class="artist-photo" src="https://tabloid.informator.news/wp-content/uploads/sites/3/2018/10/FotorCreated-33.jpg" alt=""> <br>
-               <h1 class="name-artist"><a href="#">"Имя певца"</a></h1>
+               <h1 class="name-artist"><a href={{ em }}>{{ obj.name }}</a></h1>
                </div>
 <!--            </section>-->
 <!--              <h1>Для посетителей</h1>-->
@@ -89,9 +101,9 @@
                                 <form action="/event/add/" method="post">
                                     {% csrf_token %}
                                     <label for="question">Тема</label>
-                                    <input type="text" id="question" placeholder="Вопрос" required><br><br>
+                                    <input type="text" id="question" placeholder="Вопрос" name="opros" required><br><br>
                                     <label for="songs">Songs</label>
-                                    <input type="text" name="songs" id=songs placeholder="Songs" required><br>
+                                    <input type="text" name="quest" id=songs placeholder="Songs" required><br>
                                     <input type="submit">
                                 </form>
                             </div>
@@ -127,15 +139,15 @@
             </div>
         </footer>
     </div>
-    <form class="subsForm" action="post" method="/event/new_number">
+    <form class="subsForm" action="/event/number/" method="post">
         {% csrf_token %}
-        <input type="text"  name="number" required>
+        <input type="text"  name="number" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" required>
         <input type="submit">
     </form>
 
-    <form class="joinForm" action="post" method="/chat/">
+    <form class="joinForm" action="/chat/" method="post">
         {% csrf_token %}
-    <input type="text" required>
+    <input type="text" name="chat" pattern="[A-Z]{2}[0-9]{6}" required>
     <input type="submit">
     </form>
     <script src="../static/concertPageScript.js" defer></script>

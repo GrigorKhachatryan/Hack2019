@@ -3,11 +3,19 @@ from event.models import Fans, Artists, Events
 from django.forms.models import model_to_dict
 
 def index(request):
-    return render(request, 'startPage.html')
+    if 'login' not in request.COOKIES:
+        if 'email' not in request.COOKIES:
+            bool = True
+        else:
+            bool = False
+    else:
+        bool = False
+
+    return render(request, 'startPage.html',{'bool': bool})
 
 def check(request):
     email = '"' + request.POST.get('email') + '"'
-    ticket = request.POST.get('ticket')
+    ticket = '"' + request.POST.get('ticket') + '"'
 
     obj = None
     for tick in Fans.objects.raw('SELECT * FROM event_fans WHERE email == {0}  and ticket == {1}'.format(email, ticket)):
@@ -79,16 +87,12 @@ def artist_prof(request):
 
 
 def feedback(request):
-    f = open('text.txt', 'w')
-    f.write('name: ' + request.POST.get('name') + '\n')
-    f.write('phone: ' + request.POST.get('phone') + '\n')
-    f.write('email: ' + request.POST.get('email') + '\n')
-    f.write('text: ' +request.POST.get('text') + '\n')
-    return redirect('/')
+    return render(request,'test.html',{'name': request.POST.get('name'),'phone':request.POST.get('phone'),'email': request.POST.get('email') ,'text': request.POST.get('text')})
 
 def exit(request):
     response = redirect('/')
     response.delete_cookie('email')
+    response.delete_cookie('login')
     return response
 
 def chat(request):
