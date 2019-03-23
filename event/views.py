@@ -15,7 +15,7 @@ def hm(request):
     for event in Artists.objects.raw('SELECT * FROM event_artists WHERE id == {0}'.format(obj['artist_id'])):
         art = model_to_dict(event)['name']
 
-    obj.update({'name':art})
+    obj.update({'name': art})
     print(obj)
     result = []
     id = []
@@ -25,7 +25,7 @@ def hm(request):
     dict = {}
     dict_id = {}
     dict_count = {}
-    second =[]
+    second = []
     count = []
 
     j = 0
@@ -34,28 +34,26 @@ def hm(request):
             second.append(model_to_dict(question)['name'])
             count.append(model_to_dict(question)['score'])
         for q in range(len(second)):
-            print(count[q],second[q])
-            dict_count.update({second[q]:count[q]})
+            print(count[q], second[q])
+            dict_count.update({second[q]: count[q]})
         dict.update({result[j]: second})
 
         dict_id.update({result[j]: i})
         j += 1
-        second =[]
+        second = []
     print(dict, dict_id, dict_count, count)
     max = 0
     for i in count:
-        if max < i :
+        if max < i:
             max = i
 
-    response = render(request, 'event_tmp/concertPage.html', {'obj': obj, 'dict':dict, 'dict_id':dict_id,
-                                                              'dict_count':dict_count, 'count':count, 'max':max})
+    response = render(request, 'event_tmp/concertPage.html', {'obj': obj, 'dict': dict, 'dict_id': dict_id,
+                                                              'dict_count': dict_count, 'count': count, 'max': max})
     response.set_cookie('ref', ref)
     return response
 
 
-
 def add(request):
-
     event_id = request.COOKIES['ref']
     opros = request.POST.get('opros')
     quest = request.POST.get('quest')
@@ -80,8 +78,8 @@ def add(request):
 
     return redirect('/event/?name={0}'.format(event_id))
 
-def upgrade(request):
 
+def upgrade(request):
     event_id = request.COOKIES['ref']
     val = request.POST.get('name_name')
 
@@ -96,8 +94,14 @@ def upgrade(request):
     cursor = connection.cursor()
     cursor.execute("UPDATE event_questions SET score = score + 1 WHERE id = %s", [opros_id])
 
-
     return redirect('/event/?name={0}'.format(event_id))
 
+
 def new_number(request):
-    number = request.POST.get('quest')
+    event_id = request.COOKIES['ref']
+    number = request.POST.get('number')
+    #number = '+78113112'
+    f = open('contacts.txt', 'a')
+    f.write(number + ',')
+    return redirect('/event/?name={0}'.format(event_id))
+
