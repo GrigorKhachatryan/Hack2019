@@ -10,9 +10,10 @@
     <div class="container">
         <header>
             <ul class="nav">
+                <img class="logo-site" src="../static/58623cd131349e0568ad89c2.png" alt="">
                 <li><a href="#">Главная</a></li>
-                <li><a href="#list-of-concerts">Список концертов</a></li>
-                <li><a href="/exit/">О нас</a></li>
+<!--                <li><a href="#list-of-concerts">Список концертов</a></li>-->
+                <li><a href="#about">О нас</a></li>
                 <li class="auth"><a href="#signIn">Вход</a></li>
 <!--                <li><a href="#">Регистрация</a></li>-->
             </ul>
@@ -21,18 +22,17 @@
             <img src="http://www.jojosjerkpit.com/wp-content/uploads/2013/09/live-music-slide.png">
         </div>
         <div class="title-container" id="signIn">
-            <img class="title-img" src="http://img09.deviantart.net/f908/i/2010/303/0/c/freddie_mercury_by_nekosuke8d-d31tghn.png" alt="">
-            <img class="title-img" src="https://i.pinimg.com/736x/1a/70/9e/1a709eb92e29312e4ce2f3bde7a2f4db--pencil-drawings-drawings-of.jpg" alt="">
-            <img class="title-img" src="https://avatanplus.com/files/resources/original/56759c2f8beda151bb6a19d5.png" alt="">
+            <img class="title-img" src="../static/5853cf0de694f413edea8557.png" alt="Freddie">
+            <img class="title-img" src="../static/5862e00d1aa68e0bf26fa22e.png" alt="David">
+            <img class="title-img" src="../static/580b585b2edbce24c47b2538.png" alt="Em">
             <h3 class="title">Здесь люди общаются со своими кумирами</h3>
-            <img class="title-img" class="title-img" src="https://ya-webdesign.com/images/kanye-west-cartoon-png-4.png" alt="">
-            <img class="title-img" src="https://pnggallery.com/wp-content/uploads/lana-del-rey-png-hd.png" alt="">
-            <img class="title-img" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/c8c4f299-4064-433b-8a7c-90baccbc0f4c/da9h3m9-9bae7680-c7f6-49cf-8de2-f02758a31001.png/v1/fill/w_897,h_891,strp/nicki_minaj_png_by_maarcopngs_da9h3m9-pre.png" alt="">
+            <img class="title-img" class="title-img" src="https://ya-webdesign.com/images/kanye-west-cartoon-png-4.png" alt="Kanye">
+            <img class="title-img" src="https://pnggallery.com/wp-content/uploads/lana-del-rey-png-hd.png" alt="Lana">
+            <img class="title-img" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/c8c4f299-4064-433b-8a7c-90baccbc0f4c/da9h3m9-9bae7680-c7f6-49cf-8de2-f02758a31001.png/v1/fill/w_897,h_891,strp/nicki_minaj_png_by_maarcopngs_da9h3m9-pre.png" alt="Nicki">
         </div>
         <hr>
         <section class="sign-in">
-           <img class="form-img" src="http://www.lilymercer.co.uk/wp-content/uploads/2017/07/971455-asap-rocky.jpg" alt="">
-            <div>
+            <div class="sign-container">
                 <h3 id="sign">Войти</h3>
                 <h4 class="who-r-u">Кто вы?</h4>
                 <form class="sign-form" action="/check/" method="post">
@@ -50,8 +50,8 @@
                 <form action="/artists/" method="post" class="for-actors">
                     {% csrf_token %}
                     <div class="input-div">
-                        <label for="email">Ваш login:</label>
-                        <input type="text" name="email" id="email">
+                        <label for="login">Ваш login:</label>
+                        <input type="text" name="login" id="login">
                     </div>
                     <div class="input-div">
                         <label for="pas">Ваш пароль:</label>
@@ -62,8 +62,10 @@
                 <button class="sign-for-users button-who-is">Я ПРОСТОЙ ЧЕЛОВЕК</button>
                 <button class="sign-for-actors button-who-is">Я АКТЕР</button>
             </div>
+            <img class="form-img" src="http://www.lilymercer.co.uk/wp-content/uploads/2017/07/971455-asap-rocky.jpg" alt="">
         </section>
         <hr>
+<!--
         <section class="list-of-concerts">
             <div class="list-headers">
                 <h3 id="list-of-concerts">Ближайшие десять концертов</h3>
@@ -86,6 +88,7 @@
             </div>
         </section>
         <hr>
+-->
         <section class="help">
            <img class="img-about" src="https://avatanplus.com/files/effects/mid/5c2f51c35fb8316818d76340.jpg" alt="">
            <div>
@@ -97,9 +100,14 @@
                 </article>
             </div>
         </section>
+        <hr>
         <footer>
-           <div>
-               Санкт-Петербург, HackUniversity
+            <div>
+            <img src="https://s.starladder.com/uploads/team_logo/f/b/8/f/meta_tag_cd5f05c288ddb97f9f56108d0f1d8f17.png" alt="">
+
+               Санкт-Петербург, HackUniversity <br>
+               Студенты СПбГУ <br>
+               Team Dota Science
            </div>
             <div class="copyright">
                 2019 © <br>

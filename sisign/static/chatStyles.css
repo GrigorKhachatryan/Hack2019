@@ -1,0 +1,160 @@
+body {
+    background-color: burlywood;
+}
+
+.holder-html-chat {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 300px !important;
+}
+
+#WebChatFormForm {
+    min-height: 70px;
+    width: 100%;
+}
+
+#WebChatTextID {
+    width: 295px;
+}
+
+.logo-site {
+    width: 50px;
+    margin-right: 25px;
+    margin-left: 40px;
+}
+
+
+input[type="button"] {
+    width: 100px !important;
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+input[type="button"]:hover {
+    background-color: chocolate;
+}
+    
+.container {
+    background-color: white;
+    border: 1px solid black;
+    width: 325px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 40px;
+    justify-content: center;
+    font-family: 'Roboto', 'Arial', sans-serif;
+}
+
+.container h1 {
+    padding: 0px;
+    margin: 0px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+header {
+    position: relative;
+    text-align: center;
+}
+
+.navbar {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.on-main {
+    margin-left: 40px;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.on-email {
+    cursor: pointer;
+    margin-right: 30px;
+    margin-left: auto;
+    color: black;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.list-of-concerts {
+    background-color: chocolate;
+    margin-right: 0;
+    width: 200px;
+    display: none;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0px;
+    border: 1px solid black;
+    align-self: baseline;
+    z-index: 1;
+}
+
+.list-of-concerts li {
+    cursor: pointer;
+    padding: 5px;
+    width: 100%;
+}
+
+.list-of-concerts li:hover {
+    background-color: white;
+    text-decoration: underline;
+}
+
+.on-email:hover {
+    text-decoration: underline;
+}
+
+.on-main:hover {
+    text-decoration: underline;
+}
+
+.exit {
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 30px;
+    color: black;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.exit:hover {
+    text-decoration: underline;
+}
+
+
+footer {
+/*    border: 1px solid black;*/
+    min-height: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer div img {
+    width: 100px;
+    margin-right: 20px;
+}
+
+footer div:first-child {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+footer div {
+    line-height: 25px;
+    margin-right: 20px;
+    margin-left: 20px;
+}

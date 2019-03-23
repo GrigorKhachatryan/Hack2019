@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/concertPageStyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <title>Concert</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav class="navbar">
+               <img class="logo-site" src="../static/58623cd131349e0568ad89c2.png" alt="">
+                <a class="on-main" href="/">Главная</a>
+                <ul class="list-of-concerts">
+                    <li><a>Концерт Паши Техника</a></li>
+                    <li><a>Хан Замай</a></li>
+                    <li><a>Мамин Podrygun</a></li>
+                    <li><a>Сява</a></li>
+                </ul>
+                <div class="on-email">"EMAIL"</div>
+                <a class="exit" href="#">Выход</a>
+            </nav>
+
+            <div class="logo-div">
+                <img class="logo" src="https://pp.userapi.com/c845017/v845017097/1d0f97/RdkDgY9Z_4Y.jpg" alt="">
+            </div>
+            <div class="head">
+                <div class="about-concert">
+                    <div class="main-nav date">Дата концерта: <span>01.01.2019</span></div>
+                    <div class="main-nav place">Место проведения: <span>Санкт-Петербург, клуб А2</span></div>
+                    <div class="main-nav time">Начало концерта: <span>14:00</span></div>
+                </div>
+
+                <article class="description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque repellendus aut ratione qui sunt veniam soluta aperiam quis dolore aliquam, corporis dicta quas voluptas, repellat maiores enim labore eum similique.</p>
+            </article>
+            </div>
+        </header>
+        <hr>
+        <main>
+            <section class="artist-main">
+              <div class="foo">
+               <img class="artist-photo" src="https://tabloid.informator.news/wp-content/uploads/sites/3/2018/10/FotorCreated-33.jpg" alt=""> <br>
+               <h1 class="name-artist"><a href="#">"Имя певца"</a></h1>
+               </div>
+<!--            </section>-->
+<!--              <h1>Для посетителей</h1>-->
+<!--               <section>-->
+               <div class="bar">
+                <h2>Опросы от артиста:</h2>
+                <div class="poll-container">
+                    <ul class="artist-poll">
+                        {% for key,i in dict.items %}
+                        {% for key_id,i_id in dict_id.items %}
+                            {% if key_id == key %}
+                        <li>
+                            <form action="/event/upgrade/" method="post">
+                                {% csrf_token %}
+                               <label for="select">{{ key }}</label>
+                                <select name="songs" id="select">
+                                    {% for k in i %}
+
+                                    <option value="{{ k }}">{{ k }}</option>
+
+                                            {% endfor %}
+
+                                </select>
+
+                                <input type="submit">
+                            </form>
+                            {% endif %}
+                    {% endfor %}
+                        {% endfor %}
+
+                        </li>
+
+
+
+                                        {% for key_count,i_count in dict_count.items %}
+                                            {{ key_count }} : {{ i_count }} <p></p>
+                                    {% endfor %}
+
+                    </ul>
+                    <section class="addPoll">
+                       <div class="formDiv">
+                            <img class="add-poll" src="https://lh3.googleusercontent.com/5aI-VClrZ3nTgDzjd7MKeX1R_vHC_Ks8nJksNADBJraNaXfeph9lT1cDKWcyk9lO_LY" alt="">
+                            <div class="add-poll-form">
+                                <form action="/event/add/" method="post">
+                                    {% csrf_token %}
+                                    <label for="question">Тема</label>
+                                    <input type="text" id="question" placeholder="Вопрос" required><br><br>
+                                    <label for="songs">Songs</label>
+                                    <input type="text" name="songs" id=songs placeholder="Songs" required><br>
+                                    <input type="submit">
+                                </form>
+                            </div>
+                        </div>
+                </section>
+                </div>
+            </div>
+            </section>
+<!--
+            <div class="bar">
+
+
+            </div>
+-->
+            <hr>
+            <div class="btnContainer">
+                <button class="btn subscribe">Подписаться на смс рассылку</button>
+                <button class="btn join">Написать артисту</button>
+            </div>
+        </main>
+        <hr>
+        <footer>
+            <div>
+            <img src="https://s.starladder.com/uploads/team_logo/f/b/8/f/meta_tag_cd5f05c288ddb97f9f56108d0f1d8f17.png" alt="">
+
+               Санкт-Петербург, HackUniversity <br>
+               Студенты СПбГУ <br>
+               Team Dota Science
+           </div>
+            <div class="copyright">
+                2019 © <br>
+                Все права защищены
+            </div>
+        </footer>
+    </div>
+    <form class="subsForm" action="post" method="/event/new_number">
+        {% csrf_token %}
+        <input type="text"  name="number" required>
+        <input type="submit">
+    </form>
+
+    <form class="joinForm" action="post" method="/chat/">
+        {% csrf_token %}
+    <input type="text" required>
+    <input type="submit">
+    </form>
+    <script src="../static/concertPageScript.js" defer></script>
+</body>
+</html>
