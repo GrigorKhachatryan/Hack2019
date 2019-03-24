@@ -20,9 +20,7 @@ def index(request):
     for _ in Fans.objects.raw('SELECT * FROM event_fans '):
         fan += 1
     if bool == False:
-        response = render(request, 'startPage.html',{'bool': bool, 'art': obj, 'fan': fan})
-        response.delete_cookie('login')
-        response.delete_cookie('email')
+        response = redirect('/exit/')
         return response
 
 
