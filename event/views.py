@@ -62,6 +62,9 @@ def hm(request):
     response = render(request, 'event_tmp/concertPage.html', {'obj': obj, 'dict': dict, 'dict_id': dict_id,
                                                               'dict_count': dict_count, 'count': count, 'max': max, 'em': em, 'cook_login': cook_login, 'cook_email': cook_email})
     response.set_cookie('ref', ref)
+    if 'email' not in request.COOKIES:
+        if 'login' not in request.COOKIES:
+            return HttpResponse("<p>Ошибка доступа</p>")
     return response
 
 

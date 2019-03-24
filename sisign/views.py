@@ -4,6 +4,7 @@ from django.forms.models import model_to_dict
 import matplotlib
 matplotlib.use("TkAgg")
 import matplotlib.pyplot as plt
+from django.http import HttpResponse
 
 def index(request):
     if 'login' not in request.COOKIES:
@@ -127,7 +128,9 @@ def chat(request):
         bool = False
     else:
         bool = True
-
+    if 'email' not in request.COOKIES:
+        if 'login' not in request.COOKIES:
+            return HttpResponse("<p>Ошибка доступа</p>")
     return render(request, "chat.html", {'bool': bool})
 
 
