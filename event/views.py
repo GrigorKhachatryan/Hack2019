@@ -16,9 +16,9 @@ def hm(request):
 
     art = None
     for event in Artists.objects.raw('SELECT * FROM event_artists WHERE id == {0}'.format(obj['artist_id'])):
-        art = model_to_dict(event)['name']
+        art = model_to_dict(event)
 
-    obj.update({'name': art})
+    obj.update({'name': art['name']})
     print(obj)
     result = []
     id = []
@@ -49,7 +49,7 @@ def hm(request):
     for i in count:
         if max < i:
             max = i
-    em = '/artist/?name=' + str(obj['id'])
+    em = '/artist/?name=' + str(art['id'])
     if 'login' not in request.COOKIES:
         cook_login = False
     else:
