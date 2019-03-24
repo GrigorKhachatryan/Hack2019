@@ -127,6 +127,23 @@ header ul li:hover {
     border: 1px solid black;
 }
 
+
+.rese {
+    display: none;
+    cursor: pointer;
+    border: 1px solid white;
+    background-color: inherit;
+    padding: 10px;
+    margin-right: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.rese:hover {
+    background-color: chocolate;
+    border-color: black;
+}
+
 .button-who-is {
     cursor: pointer;
     border: 1px solid white;
@@ -241,6 +258,7 @@ input[type="submit"] {
     margin-left: 70px;
     margin-right: 60px;
 }
+
 
 .help {
     display: flex;
