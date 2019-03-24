@@ -46,16 +46,17 @@ def artist(request):
 
 
     login = '"' + request.POST.get('login') + '"'
-    password = request.POST.get('password')
+    password = '"' + request.POST.get('password')+ '"'
     obj = None
     for art in Artists.objects.raw('SELECT * FROM event_artists WHERE log =={0} and pas == {1}'.format(login,password)):
         obj = model_to_dict(art)
         id = obj['id']
+    if obj == None:
+        return render(request, 'error.html')
     response = redirect('../artist/?name='+ str(id))
     response.set_cookie('login', login)
     response.delete_cookie('email')
-    if obj == None:
-        return render(request, 'error.html')
+
     return response
 
 
