@@ -20,6 +20,7 @@ def index(request):
     fan = 0
     for _ in Fans.objects.raw('SELECT * FROM event_fans '):
         fan += 1
+
     if bool == False:
         response = redirect('/exit/')
         return response

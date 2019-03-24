@@ -116,8 +116,20 @@ def new_number(request):
     event_id = request.COOKIES['ref']
     number = request.POST.get('number')
     print(number)
+
+    f = open('contacts.txt', 'r')
+    x = []
+    for k in f:
+        x.append(k)
+    x = str(x)
+    if str(number) in x:
+        return HttpResponse("<h3>Вы уже оформили подписку</h3>")
+
+
     s = str(int(str(number)[-5:])//2*3)
     print(s)
+
+
 
 
     #number = '+78113112'
