@@ -20,7 +20,7 @@ document.querySelector('.add-poll').addEventListener('click', () => {
 // });
 
 document.querySelector('.subscribe').addEventListener('click', () => {
-    let res = prompt('Если согласны, введите номер телефона', 79999999999);
+    let res = prompt('Согласны ли вы на отправку вам сообщений во время концерта, которые будут уведомлять о флешмобах?', 79999999999);
     if (res !== null) {
       let form = document.querySelector('.subsForm');
       form.querySelector('input[type="text"]').value = res;
