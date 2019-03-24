@@ -41,24 +41,26 @@
             {% if bool == True %}
             <div class="sign-container">
                 <h3 id="sign">Войти</h3>
+                <button class="rese">Назад</button>
                 <h4 class="who-r-u">Кто вы?</h4>
                 <form class="sign-form" action="/check/" method="post">
                     {% csrf_token %}
                     <div class="input-div">
                         <label for="email">Ваш email:</label>
-                        <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                        <input type="email" name="email" id="email" required placeholder="example@email.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
                     </div>
                     <div class="input-div">
                         <label for="ticket-number">Номер билета:</label>
-                        <input type="text" name="ticket" id="ticket-number" pattern="[A-Z]{2}[0-9]{6}">
+                        <input type="text" name="ticket" required placeholder="XX000000" id="ticket-number" pattern="[A-Z]{2}[0-9]{6}">
                     </div>
                     <input type="submit" value="Войти">
+                    <!--<button class="rese">Назад</button>-->
                 </form>
                 <form action="/artists/" method="post" class="for-actors">
                     {% csrf_token %}
                     <div class="input-div">
                         <label for="login">Ваш login:</label>
-                        <input type="text" name="login" id="login">
+                        <input type="text" placeholder="PotnyiKolyan" name="login" id="login">
                     </div>
                     <div class="input-div">
                         <label for="pas">Ваш пароль:</label>
@@ -66,12 +68,15 @@
                     </div>
 
                     <input type="submit" value="Войти">
+
                 </form>
-                <button class="sign-for-users button-who-is">Я ПРОСТОЙ ЧЕЛОВЕК</button>
-                <button class="sign-for-actors button-who-is">Я АКТЕР</button>
+                <button class="sign-for-users button-who-is">Я ФАНАТ</button>
+                <button class="sign-for-actors button-who-is">Я АРТИСТ</button>
+
             </div>
             {% endif %}
             <img class="form-img" src="http://www.lilymercer.co.uk/wp-content/uploads/2017/07/971455-asap-rocky.jpg" alt="">
+
         </section>
         <hr>
 <!--
@@ -118,6 +123,11 @@
                Студенты СПбГУ <br>
                Team Dota Science
            </div>
+            <div  align="center" style="color:red; margin:auto; width:50%;">
+                <p>Всего нашим сервисом воспользовались:</p>
+            фанатов - {{fan}}
+            артистов - {{art}}
+            </div>
             <div class="copyright">
                 2019 © <br>
                 Все права защищены

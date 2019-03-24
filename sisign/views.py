@@ -1,6 +1,9 @@
 from django.shortcuts import render, redirect
 from event.models import Fans, Artists, Events
 from django.forms.models import model_to_dict
+import matplotlib
+matplotlib.use("TkAgg")
+import matplotlib.pyplot as plt
 
 def index(request):
     if 'login' not in request.COOKIES:
@@ -10,8 +13,20 @@ def index(request):
             bool = False
     else:
         bool = False
+    obj = 0
+    for _ in Artists.objects.raw('SELECT * FROM event_artists '):
+        obj += 1
+    fan = 0
+    for _ in Fans.objects.raw('SELECT * FROM event_fans '):
+        fan += 1
+    if bool == False:
+        response = render(request, 'startPage.html',{'bool': bool, 'art': obj, 'fan': fan})
+        response.delete_cookie('login')
+        response.delete_cookie('email')
+        return response
 
-    return render(request, 'startPage.html',{'bool': bool})
+
+    return render(request, 'startPage.html',{'bool': bool, 'art': obj, 'fan': fan})
 
 def check(request):
     email = '"' + request.POST.get('email') + '"'
@@ -83,7 +98,20 @@ def artist_prof(request):
             print(model_to_dict(it))
         j += 1
     stat = int(sum(result_sum)/len(result_sum))
+
+    plot(result_sum)
+
     return render(request, 'artist.html', {'art': obj, 'pol':event, 'cook_login': cook_login, 'cook_email': cook_email, 'stat': stat})
+
+def plot(result_sum):
+    plt.bar([i + 1 for i in range(len(result_sum))], result_sum)
+    plt.title('Посещаемость концертов')
+    plt.ylabel('Количество зрителей')
+    plt.xlabel('Концерты')
+    plt.savefig('./sisign/static/stat.png')
+    print(result_sum)
+
+
 
 
 def feedback(request):

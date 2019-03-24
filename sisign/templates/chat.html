@@ -21,7 +21,7 @@
             #answer {display: none;}
 
             {% if bool == True%}
-            .html-chat-msg b {color: red}
+                .html-chat-msg b {color: red}
             {%endif%}
 
     </style>
@@ -73,7 +73,12 @@
 
            // Запуск чата. Передаём ему элемент в котором надо создать окно чата.
            htmljs_Chat_Init( $("#html-chat"));
-            document.getElementById('WebChatNameID').value = 'Grigor';
+            document.getElementById('WebChatNameID').value = {% if bool == False %}
+                                                                    'fan';
+                                                             {% endif %}
+                                                             {% if bool == True %}
+                                                                'Korzh';
+                                                             {% endif %}
         });
     </script>
 </body>
