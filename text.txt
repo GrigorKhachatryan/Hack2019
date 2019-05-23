@@ -1,4 +1,0 @@
-name: Григор
-phone: +79995354001
-email: grigor777001@yandex.ru
-text: grigor khachatryan
